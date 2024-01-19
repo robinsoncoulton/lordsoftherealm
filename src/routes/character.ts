@@ -1,3 +1,4 @@
+import characterController from "../controllers/character";
 import express, { Request, Response } from "express";
 const router = express.Router();
 
@@ -7,9 +8,6 @@ router.get("/", (req: Request, res: Response) => {
   res.send();
 });
 
-router.post("/", (req: Request, res: Response) => {
-  res.statusCode = 201;
-  res.json("Lords of the Realm!");
-});
+router.post("/", characterController.post);
 
 export default router;
