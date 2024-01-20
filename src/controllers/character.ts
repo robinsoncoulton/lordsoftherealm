@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { Character } from "types/Character";
-import openAiAdaptor from "../adaptors/openAiAdaptor";
+import openAiAdaptor from "../adaptors/openAiAdaptor/openAiAdaptor";
 import { AiAdaptor } from "../adaptors/aiAdaptor";
 
 const aiAdaptor: AiAdaptor = openAiAdaptor;
