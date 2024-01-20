@@ -5,10 +5,10 @@ export type Physique = {
   fitness: Fitness;
   size: Size;
   age: IntRange<0, 120>;
-  sex: SEX;
+  sex: Sex;
 };
 
-enum Fitness {
+export enum Fitness {
   FRAIL = "Frail",
   MODERATE = "Moderate",
   ROBUST = "Robust",
@@ -16,7 +16,7 @@ enum Fitness {
   PEAK = "Peak",
 }
 
-enum Size {
+export enum Size {
   SEVERELY_OBESE = "Severely Obese",
   OBESE = "Obese",
   OVERWEIGHT = "Overweight",
@@ -24,7 +24,7 @@ enum Size {
   SLIM = "Slim",
 }
 
-enum SEX {
+export enum Sex {
   MALE = "Male",
   FEMALE = "Female",
 }

@@ -6,11 +6,11 @@ export type Hair = {
 
 export type FacialHair = {
   style: BeardStyle;
-  colour: BeardColor;
+  colour: BeardColour;
   length: HairStrength;
 };
 
-enum HairColour {
+export enum HairColour {
   BLONDE = "Blonde",
   BLACK = "Black",
   BROWN = "Brown",
@@ -20,7 +20,7 @@ enum HairColour {
   WHITE = "White",
 }
 
-enum Hairstyle {
+export enum Hairstyle {
   BALD = "Bald",
   SHORT_CROPPED = "Short Cropped",
   BOWL_CUT = "Bowl Cut",
@@ -34,14 +34,14 @@ enum Hairstyle {
   TONSURE = "Tonsure",
 }
 
-enum HairStrength {
+export enum HairStrength {
   RECEDING = "Receding",
   WHISPY = "Whispy",
   ROBUST = "Robust",
   HEALTHY = "Healthy",
 }
 
-enum BeardStyle {
+export enum BeardStyle {
   CLEAN_SHAVEN = "Clean-Shaven",
   GOATEE = "Goatee",
   FULL_BEARD = "Full Beard",
@@ -54,7 +54,7 @@ enum BeardStyle {
   HANDLEBAR = "Handlebar Mustache",
 }
 
-enum BeardColor {
+export enum BeardColour {
   BLACK = "Black",
   BROWN = "Brown",
   BLONDE = "Blonde",

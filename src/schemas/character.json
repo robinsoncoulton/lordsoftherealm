@@ -1,0 +1,219 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the character, which should be realistic for the setting of 14th Century England"
+    },
+    "personalAttributes": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "scores": {
+          "type": "object",
+          "description": "A series of logarithmic values that describe the characters strength in each attribute. 50 would be average, 0 completely hopeless and 100 the greatest the world has ever seen. Characters should have a range of positive and negative scores and values should be generated without too many extreme high or low values.",
+          "properties": {
+            "Chivalry": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Loyalty": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Wisdom": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Justice": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Military_Prowess": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "Charisma": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Diplomacy": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Piety": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Generosity": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Mercy": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Stewardship": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Courtesy": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Tact": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Endurance": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Cultural_Appreciation": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "Education": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Accessibility": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "Lavishness": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Noble_Lineage": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "Strategic_Vision": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "Chivalry",
+            "Loyalty",
+            "Wisdom",
+            "Justice",
+            "Military_Prowess",
+            "Charisma",
+            "Diplomacy",
+            "Piety",
+            "Generosity",
+            "Mercy",
+            "Stewardship",
+            "Courtesy",
+            "Tact",
+            "Endurance",
+            "Cultural_Appreciation",
+            "Education",
+            "Accessibility",
+            "Lavishness",
+            "Noble_Lineage",
+            "Strategic_Vision"
+          ]
+        }
+      },
+      "required": ["scores"]
+    },
+    "physicalAttributes": {
+      "type": "object",
+      "properties": {
+        "hair": {
+          "type": "object",
+          "properties": {
+            "colour": {
+              "type": "string",
+              "enum": [
+                "Blonde",
+                "Black",
+                "Brown",
+                "Red",
+                "Auburn",
+                "Grey",
+                "White"
+              ]
+            },
+            "strength": {
+              "type": "string",
+              "enum": ["Receding", "Whispy", "Robust", "Healthy"]
+            },
+            "style": {
+              "type": "string",
+              "enum": [
+                "Bald",
+                "Short Cropped",
+                "Bowl Cut",
+                "Shoulder Length",
+                "Page Boy",
+                "Pixie Cut",
+                "Shaved Sides",
+                "Man Bun",
+                "Topknot",
+                "Flowing Locks",
+                "Tonsure"
+              ]
+            }
+          },
+          "required": ["colour", "strength", "style"]
+        },
+        "facialHair": {
+          "type": "object",
+          "properties": {
+            "style": {
+              "type": "string",
+              "enum": [
+                "Clean-Shaven",
+                "Goatee",
+                "Full Beard",
+                "Van Dyke",
+                "Anchor Beard",
+                "Stubble",
+                "Mutton Chops",
+                "Soul Patch",
+                "Ducktail",
+                "Handlebar Mustache"
+              ]
+            },
+            "colour": {
+              "type": "string",
+              "enum": ["Black", "Brown", "Blonde", "Red", "Grey", "White"]
+            },
+            "length": {
+              "type": "string",
+              "enum": ["Receding", "Whispy", "Robust", "Healthy"]
+            }
+          },
+          "required": ["style", "colour", "length"]
+        },
+        "physique": {
+          "type": "object",
+          "properties": {
+            "height": {
+              "type": "object",
+              "properties": {
+                "ft": { "type": "integer", "minimum": 2, "maximum": 7 },
+                "in": { "type": "integer", "minimum": 0, "maximum": 11 }
+              },
+              "required": ["ft", "in"]
+            },
+            "fitness": {
+              "type": "string",
+              "enum": ["Frail", "Moderate", "Robust", "Athletic", "Peak"]
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "Severely Obese",
+                "Obese",
+                "Overweight",
+                "Normal Weight",
+                "Slim"
+              ]
+            },
+            "age": { "type": "integer", "minimum": 0, "maximum": 120 },
+            "sex": { "type": "string", "enum": ["Male", "Female"] }
+          },
+          "required": ["height", "fitness", "size", "age", "sex"]
+        },
+        "disposition": {
+          "type": "object",
+          "description": "A series of logarithmic values that describe the characters personality. 50 would be average, 0 completely opposite of the personality and 100 very strongly represents the personality. Characters should have a range of positive and negative scores and values should be generated without too many extreme high or low values.",
+          "properties": {
+            "positivity": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "libido": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "humour": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "resilience": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "emotional": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "assertiveness": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "diplomatic": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "empathy": { "type": "integer", "minimum": 0, "maximum": 100 }
+          },
+          "required": [
+            "description",
+            "positivity",
+            "libido",
+            "humour",
+            "resilience",
+            "emotional",
+            "assertiveness",
+            "diplomatic",
+            "empathy"
+          ]
+        }
+      },
+      "required": ["hair", "facialHair", "physique", "disposition"]
+    },
+    "profession": { "type": "string", "enum": ["Nobleman"] }
+  },
+  "required": ["name", "personalAttributes", "physicalAttributes", "profession"]
+}

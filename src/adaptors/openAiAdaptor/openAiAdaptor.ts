@@ -7,7 +7,7 @@ const openAiAdaptor: AiAdaptor = {
       `${process.env.AI_BASE_URL}/v1/chat/completions`,
       {}
     );
-    return { message: response.data.toString() };
+    return response.data;
   },
 };
 

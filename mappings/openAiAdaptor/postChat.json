@@ -5,7 +5,7 @@
   },
   "response": {
     "status": 200,
-    "body": "Hello, ChatGPT!",
+    "body": "{\n  \"name\": \"Sir Percival\",\n  \"personalAttributes\": {\n    \"scores\": {\n      \"Chivalry\": 90,\n      \"Loyalty\": 85,\n      \"Wisdom\": 75,\n      \"Justice\": 80,\n      \"Military_Prowess\": 95,\n      \"Charisma\": 88,\n      \"Diplomacy\": 70,\n      \"Piety\": 92,\n      \"Generosity\": 78,\n      \"Mercy\": 85,\n      \"Stewardship\": 65,\n      \"Courtesy\": 80,\n      \"Tact\": 75,\n      \"Endurance\": 90,\n      \"Cultural_Appreciation\": 85,\n      \"Education\": 75,\n      \"Accessibility\": 70,\n      \"Lavishness\": 60,\n      \"Noble_Lineage\": 95,\n      \"Strategic_Vision\": 88\n    }\n  },\n  \"physicalAttributes\": {\n    \"hair\": {\n      \"colour\": \"Blonde\",\n      \"strength\": \"Robust\",\n      \"style\": \"Short Cropped\"\n    },\n    \"facialHair\": {\n      \"style\": \"Full Beard\",\n      \"colour\": \"Brown\",\n      \"length\": \"Robust\"\n    },\n    \"physique\": {\n      \"height\": { \"ft\": 6, \"in\": 2 },\n      \"fitness\": \"Athletic\",\n      \"size\": \"Normal Weight\",\n      \"age\": 35,\n      \"sex\": \"Male\"\n    },\n    \"disposition\": {\n      \"positivity\": 85,\n      \"libido\": 75,\n      \"humour\": 80,\n      \"resilience\": 90,\n      \"emotional\": 80,\n      \"assertiveness\": 88,\n      \"diplomatic\": 70,\n      \"empathy\": 85\n    }\n  },\n  \"profession\": \"Nobleman\"\n}",
     "headers": {
       "Content-Type": "application/json"
     }
