@@ -2,6 +2,7 @@
   "name": "lordsoftherealm",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://robinsoncoulton.github.io/lordsoftherealm",
   "scripts": {
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
@@ -21,6 +22,7 @@
     "morgan": "~1.9.1",
     "openai": "^4.24.7",
     "redoc-express": "^2.1.0",
+    "uuid": "^9.0.1",
     "wiremock": "^2.35.1"
   },
   "devDependencies": {
